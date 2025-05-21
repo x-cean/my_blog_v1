@@ -7,10 +7,10 @@ app = Flask(__name__)
 
 def get_blog_posts():
     try:
-        with open("blog_posts.json", "r") as f:
+        with open("database/blog_posts.JSON", "r") as f:
             return json.load(f)
     except FileNotFoundError:
-        with open("blog_posts.json", "w") as f:
+        with open("database/blog_posts.JSON", "w") as f:
             json.dump([], f)
             return []
 
