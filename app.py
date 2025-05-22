@@ -89,6 +89,7 @@ def add():
     # if it's a GET request, display the add.html page
     return render_template('add.html')
 
+
 @app.route('/delete/<int:post_id>')
 def delete(post_id):
     """
