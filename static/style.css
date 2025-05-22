@@ -5,6 +5,25 @@ body {
     color: #333;
 }
 
+.navbar {
+    background-color: #FFF;
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #000000;
+    color: white;
+}
+
 h1 {
     text-align: center;
     color: #4F4F4F;
