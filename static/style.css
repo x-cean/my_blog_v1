@@ -6,8 +6,12 @@ body {
 }
 
 .navbar {
-    background-color: #FFF;
+    background-color: #F5F5F5;
     overflow: hidden;
+    position: fixed;     /* Make it stick */
+    top: 0;              /* Stick to the top */
+    width: 100%;         /* Full width */
+    z-index: 1000;       /* Stay on top of other elements */
 }
 
 .navbar a {
@@ -43,6 +47,10 @@ h1 {
 
 .post p {
     margin: 10px 0;
+}
+
+.post button {
+    margin: 5px 5px 2px 0;
 }
 
 form {

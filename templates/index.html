@@ -8,9 +8,9 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="add.html">Add</a>
-        <a href="delete.html">Delete</a>
+        <a href="/">Home</a>
+        <a href="/add">Add</a>
+        <a href="/delete">Delete</a>
     </div>
     <h1>Welcome to My Flask Blog!</h1>
     {% for post in posts %}
@@ -18,6 +18,8 @@
         <h2>{{ post["title"] }}</h2>
         <p><em>Written by {{ post["author"] }}</em></p>
         <p>{{ post["content"] }}</p>
+        <a href="/edit/{{ post['id'] }}"><button><em>Edit</em></button></a>
+        <a href="/delete/{{ post['id'] }}"><button><em>Delete</em></button></a>
     </div>
     {% endfor %}
 </body>
