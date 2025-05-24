@@ -104,6 +104,13 @@ form input[type="submit"]:hover {
     background-color: #000000;
 }
 
+.delete {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
 @media (max-width: 600px) {
 body {
     padding: 10px;

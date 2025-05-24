@@ -18,7 +18,9 @@
         <p><em>Written by {{ post["author"] }}</em></p>
         <p>{{ post["content"] }}</p>
         <a href="/update/{{ post['id'] }}"><button><em>Update</em></button></a>
-        <a href="/delete/{{ post['id'] }}"><button><em>Delete</em></button></a>
+        <form action="/delete/{{ post['id'] }}" method="POST" class="delete">
+            <button type="submit"><em>Delete</em></button>
+        </form>
     </div>
     {% endfor %}
 </body>
