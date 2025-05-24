@@ -120,12 +120,11 @@ def update(post_id):
     # POST request
     if request.method == 'POST':
         # Update the post in the JSON file
-        posts.remove(post)
-        post_author = request.form.get('author')
-        post_title = request.form.get('title')
-        post_content = request.form.get('content')
-        updated_post = {"id": post["id"], "author": post_author, "title": post_title, "content": post_content}
-        posts.append(updated_post)
+        for post in posts:
+            if post["id"] == post_id:
+                post["author"] = request.form.get("author")
+                post["title"] = request.form.get("title")
+                post["content"] = request.form.get("content")
         with open("database/blog_posts.JSON", "w") as f:
             json.dump(posts, f)
         # Redirect back to index
