@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Post a new blog!</h1>
-    <form action="/add" method="POST">
+    <form action="{{ url_for('add') }}" method="POST">
         <label for="author">Author:</label>
         <input type="text" id="author" name="author" required>
         <label for="title">Title:</label>
